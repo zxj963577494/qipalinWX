@@ -94,7 +94,7 @@ var postPostsRequest = wxRequest.postRequestAuth(url, data);
 
 需要[知更鸟Begin主题](http://zmingcx.com/begin.html)配套使用
 
-高级使用见：[wp-rest-api-for-app](https://github.com/zxj963577494/wp-rest-api-for-app)
+高级使用见：[wp-rest-api](https://github.com/zxj963577494/wp-rest-api)
 
 ### 浏览量
 
