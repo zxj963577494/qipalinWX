@@ -103,7 +103,3 @@ var postPostsRequest = wxRequest.postRequestAuth(url, data);
 ### 浏览量
 
 需要安装『WP-PostViews』插件配套使用
-
-## 缩略图
-
-本小程序使用的缩略图优先使用『thumbnail』字段，该字段是与[知更鸟Begin主题](http://zmingcx.com/begin.html)，具体为文章编辑页的手动缩略图，配套使用的，如果没有改字段优先选用文章中第一张图片，最后才是默认图片，具体见代码。
