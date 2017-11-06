@@ -1,0 +1,9 @@
+<template name="tempHeader">
+  <view class="header">
+    <image src="../../images/logo.png" style="height:120rpx;width:400rpx"></image>
+    <view>
+      汇聚世间各种奇葩事与物
+    </view>
+  </view>
+</template>
+<!-- header end -->

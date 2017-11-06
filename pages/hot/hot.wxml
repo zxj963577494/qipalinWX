@@ -1,0 +1,45 @@
+<import src="../../templates/common-list.wxml" />
+<import src="../../templates/copyright.wxml" />
+
+
+<view class="top-bar">
+    <block wx:for="{{topBarItems}}" wx:key="id">
+        <view class="top-bar-item {{item.selected ? 'top-bar-item-Selected': '' }}" catchtap="onTapTag" id="{{item.id}}">{{item.name}}</view>
+    </block>
+</view>
+<view class="container">
+    <view wx:if="{{showerror}}" class="showerror">
+        <image src="../../images/cry80.png" style="height:100rpx;width:100rpx"></image>
+
+        <view class="errortext">
+            暂时无法访问网络
+            <view class="">
+                <button class="more-button" bindtap="reload" size="mini" bindtap="reload">重新加载</button>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{showallDisplay}}">
+        <view class="common-list">
+            <block wx:key="id" wx:for="{{postsList}}">
+                <view class="list-item has-img" index="{{index}}" id="{{item.post_id}}" bindtap="redictDetail">
+                    <view class="content-title">
+                        <text>{{item.post_title}}</text>
+                    </view>
+                    <view class="content-date">
+                        <text>{{item.date}}</text>
+                        <text class="iconfont icon-attention_light"> {{item.pageviews}}</text>
+                        <text class="iconfont icon-comment_light"> {{item.total_comments}}</text>
+                        <text class="iconfont icon-appreciate_light"> {{item.like_count}}</text>
+                    </view>
+                    <image src="{{item.post_thumbnail_image}}" class="cover"></image>
+                </view>
+            </block>
+        </view>
+
+    </view>
+
+    <view class="copyright" wx:if="{{floatDisplay}}">
+        <template is="tempCopyright" />
+    </view>
+</view>

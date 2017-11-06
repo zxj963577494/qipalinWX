@@ -1,0 +1,29 @@
+<import src="../../templates/common-list.wxml" />
+<import src="../../templates/copyright.wxml" />
+<view class="container">
+  <view>
+    <view wx:if="{{showerror}}" class="showerror">
+      <image src="../../images/cry80.png" style="height:100rpx;width:100rpx"></image>
+      <view class="errortext">
+        暂时无法访问网络
+        <view class="">
+          <button class="more-button" bindtap="reload" size="mini" bindtap="reload">重新加载</button>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{showallDisplay}}">
+      <template is="tempCommonList" data="{{postsList}}" />
+      
+    </view>
+
+    <view wx:if="{{floatDisplay}}" class="loadingmore">
+      <view class="no-more" wx:if="{{isLastPage}}">---无更多文章---</view>
+    </view>
+
+    <view wx:if="{{floatDisplay}}" class="copyright">
+      <template is="tempCopyright" />
+    </view>
+    
+  </view>
+</view>

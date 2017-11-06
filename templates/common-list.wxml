@@ -1,0 +1,18 @@
+<template name="tempCommonList">
+  <view class="common-list">
+    <block wx:key="id" wx:for="{{postsList}}">
+      <view class="list-item has-img" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
+        <view class="content-title">
+          <text>{{item.title.rendered}}</text>
+        </view>
+        <view class="content-date">
+          <text>{{item.date}}</text>
+          <text class="iconfont icon-attention_light"> {{item.pageviews}}</text>
+          <text class="iconfont icon-comment_light"> {{item.total_comments}}</text>
+          <text class="iconfont icon-appreciate_light"> {{item.like_count}}</text>
+        </view>
+        <image src="{{item.thumbnail}}" mode="aspectFill" class="cover"></image>
+      </view>
+    </block>
+  </view>
+</template>

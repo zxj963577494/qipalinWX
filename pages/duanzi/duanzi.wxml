@@ -1,0 +1,34 @@
+<import src="../../wxParse/wxParse.wxml" />
+<import src="../../templates/copyright.wxml" />
+<view class="container">
+  <view wx:if="{{showerror}}" class="showerror">
+    <image src="../../images/cry80.png" style="height:100rpx;width:100rpx"></image>
+    <view class="errortext">
+      暂时无法访问网络,下拉重试...
+    </view>
+  </view>
+  
+  <view class="common-list">
+    <block wx:key="id" wx:for="{{postsList}}">
+      <view class="list-item" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
+        <view style="font-size:36rpx">
+          <text>{{item.content.rendered}}</text>
+        </view>
+        <view class="content-date">
+          <text>{{item.date}}</text>
+          <text class="iconfont icon-attention_light"> {{item.pageviews}}</text>
+          <text class="iconfont icon-comment_light"> {{item.total_comments}}</text>
+          <text class="iconfont icon-appreciate_light"> {{item.like_count}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{floatDisplay}}" class="loadingmore">
+    <view class="no-more" hidden="{{isLastPage}}">---无更多段子---</view>
+  </view>
+
+  <view wx:if="{{floatDisplay}}" class="copyright">
+    <template is="tempCopyright" />
+  </view>
+</view>

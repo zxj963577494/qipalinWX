@@ -1,0 +1,13 @@
+<view>
+    <view wx:for="{{list}}" wx:key="{{item.id}}" class="img_box" style="top:{{item.top}}px;left:{{item.left}}px">
+      <image id="{{item.id}}" src="{{item.url}}" mode="widthFix" bindload="loadImage" bindtap="redictDetail"
+      data-index="{{index}}" class="fadeShow"></image>
+      <div class="item_desc">{{item.name}}</div>
+    </view>
+  </view>
+  <view class="loading_box" wx:if="{{pageStatus}}" style="top:{{(leftHeight>rightHeight?leftHeight:rightHeight)-40}}px">
+  <view class="loading_fade_circle"></view>
+    <view wx:if="{{floatDisplay}}" class="loadingmore">
+    <view class="no-more" hidden="{{isLastPage}}">---无更多图片---</view>
+  </view>
+</view>

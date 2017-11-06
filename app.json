@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/page/page",
+    "pages/list/list",
+    "pages/topic/topic",
+    "pages/hot/hot",
+    "pages/pay/pay",
+    "pages/deliver/deliver",
+    "pages/pictures/pictures",
+    "pages/picdetail/picdetail",
+    "pages/dzdetail/dzdetail",
+    "pages/duanzi/duanzi"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "奇葩林",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#005B8B",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tar-home.png",
+        "selectedIconPath": "images/tar-home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/tar-list.png",
+        "selectedIconPath": "images/tar-list-on.png",
+        "text": "趣闻"
+      },
+      {
+        "pagePath": "pages/duanzi/duanzi",
+        "iconPath": "images/tar-duanzi.png",
+        "selectedIconPath": "images/tar-duanzi-on.png",
+        "text": "段子"
+      },
+      {
+        "pagePath": "pages/pictures/pictures",
+        "iconPath": "images/tar-picture.png",
+        "selectedIconPath": "images/tar-picture-on.png",
+        "text": "图片"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

@@ -1,0 +1,21 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<import src="../../templates/header.wxml"/>
+
+<view class="container">
+  <template is="tempHeader" /> 
+
+  <view class='title'>请选择赞赏的金额</view>
+
+  <view class="price-list">
+    <view class="item" wx:for="{{prices}}" wx:key="item" data-item="{{item}}" bindtap="selectItem">
+      <view class="price-box {{selected==item?'active':''}}">
+        <em><text class="price">{{item}}</text>  元</em> 
+      </view>
+    </view>
+  </view>
+
+ <view style="text-align: center">
+  <button class="cancel-button;margin-bottom: 40rpx" formType="submit" size="mini" bindtap="cancel">取消</button>
+ </view>
+
+</view>

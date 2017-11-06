@@ -1,0 +1,7 @@
+<template name="tempFooter"> 
+  <view class="header">    
+    <view>
+      © 2017 奇葩林 qipalin.com is proudly powered by WordPress
+    </view>
+  </view>
+</template>

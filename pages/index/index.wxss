@@ -1,0 +1,110 @@
+.index-header {
+    text-align: center;
+    font-weight: normal;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    color: #757575;
+    margin-top: 5rpx;
+}
+
+
+/*   index   swiper  */
+
+swiper.index-swiper {
+    position: relative;
+    height: 450rpx;
+}
+
+swiper .swiper-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+swiper image {
+    display: block;
+    width: 100%;
+    height: 95%;
+}
+
+swiper .swiper-desc {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0rpx 20rpx;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 36rpx;
+    height: 100rpx
+}
+
+swiper .swiper-text {
+    line-height: 100rpx;
+}
+
+
+/*   index   swiper  end  */
+
+.search-button {
+    border-left: 0!important;
+    border-top: 1px solid #ededed !important;
+    border-right: 1px solid #ededed !important;
+    border-bottom: 1px solid #ededed !important;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    color: #296FD0 !important;
+    width: 20%;
+    margin: 0!important;
+}
+
+.search-button icon {
+    position: absolute;
+    margin-top: 14rpx;
+}
+
+.search-input {
+    background-color: #fff;
+    padding: 8rpx 0 8rpx 30rpx;
+    min-height: 1rem;
+    font-size: 30rpx;
+    /*  position: absolute;*/
+    border-bottom-left-radius: 60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid #ededed;
+    border-right: 0!important;
+    width: 80%;
+    text-align: left;
+}
+
+.share-button {
+    border: 1px solid #eee !important;
+    color: #296FD0 !important;
+    left: 10rpx;
+    height: 60rpx;
+    width: 200rpx;
+}
+
+.search-pancel {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rpx
+}
+
+.search-pancel image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+}

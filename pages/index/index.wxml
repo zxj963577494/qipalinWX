@@ -1,0 +1,48 @@
+<import src="../../templates/common-list.wxml" />
+<import src="../../templates/copyright.wxml" />
+<view class="container">
+
+  <view wx:if="{{displayHeader}}" class="header">
+    <image src="../../images/logo.png" style="height:120rpx;width:400rpx"></image>
+    <view>
+      汇聚各种奇闻趣事的分享社区
+    </view>
+  </view>
+
+  <view wx:if="{{displaySwiper}}" class="index-header">
+    <swiper class="index-swiper" indicator-dots="true" interval="10000" autoplay="true">
+      <block wx:key="id" wx:for="{{postsShowSwiperList}}">
+        <swiper-item id="{{item.id}}" index="{{index}}" bindtap="redictDetail">
+          <image mode="aspectFill" src="{{item.thumbnail}}" style="width:100%" />
+          <view class="swiper-mask"></view>
+          <view class="swiper-desc">
+            <text class="swiper-text">{{item.title.rendered}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view wx:if="{{showallDisplay}}">
+    <!-- 加载图文列表 -->
+    <template is="tempCommonList" data="{{postsList}}" />
+
+    <view wx:if="{{floatDisplay}}" class="loadingmore">
+      <view wx:if="{{!isLastPage}}">
+        <button class="more-button" formType="submit" size="mini" bindtap="loadMore">加载更多...</button>
+      </view>
+      <view class="no-more" wx:if="{{isLastPage}}">---无更多文章---</view>
+    </view>
+
+    <view wx:if="{{floatDisplay}}" class="copyright">
+      <template is="tempCopyright" />
+    </view>
+  </view>
+
+  <view wx:if="{{showerror}}" class="showerror">
+    <image src="../../images/cry80.png" style="height:100rpx;width:100rpx"></image>
+    <view class="errortext">
+      暂时无法访问网络,下拉重试...
+    </view>
+  </view>
+</view>

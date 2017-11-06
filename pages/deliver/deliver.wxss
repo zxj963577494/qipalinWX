@@ -1,0 +1,155 @@
+.zan-btn {
+    position: relative;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 2px;
+    border: 1rpx solid #e5e5e5;
+    font-size: 16px;
+    line-height: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.zan-btn::after {
+    display: none;
+}
+
+.zan-btns {
+    margin: 15px;
+}
+
+
+/* type */
+
+.zan-btn--primary {
+    color: #fff;
+    background-color: #4b0;
+    border-color: #0a0;
+}
+
+.zan-btn--warn {
+    color: #fff;
+    background-color: #f85;
+    border-color: #f85;
+}
+
+.zan-btn--danger {
+    color: #fff;
+    background-color: #f44;
+    border-color: #e33;
+}
+
+
+/* 重写button组件的button-hover样式 */
+
+.button-hover {
+    opacity: 0.9;
+}
+
+@keyframes btn-spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* :last-child */
+
+.zan-btn--last-child,
+.zan-btn:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.zan-cell {
+    position: relative;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.zan-cell::after {
+    position: absolute;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    border-top: 1rpx solid #e5e5e5;
+    background: #e5e5e5;
+    content: ' ';
+}
+
+.zan-cell__bd {
+    flex: 1;
+}
+
+.zan-form {
+    background-color: #fff;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+
+.zan-form__item {
+    line-height: 26px;
+}
+
+.zan-form__title {
+    float: left;
+    width: 80px;
+    font-size: 14px;
+}
+
+.zan-form__title--top {
+    align-self: flex-start;
+}
+
+.zan-form__input,
+.zan-form__textarea {
+    min-height: 26px;
+}
+
+.zan-form__input input {
+    min-height: 26px;
+}
+
+.zan-form__textarea {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.zan-form__textarea textarea {
+    width: auto;
+    flex: 1;
+}
+
+.zan-panel {
+    background: #fff;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.zan-check-label__list .zan-check-label__radio {
+    display: none;
+}
+
+.zan-check-label__selected {
+    color: #ff4444;
+}
+
+.slide-image {
+    height: 150px;
+    width: 100%;
+}
