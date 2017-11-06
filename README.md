@@ -9,6 +9,10 @@
 
 ![wordpress微信小程序](https://i.loli.net/2017/11/06/5a001aff2ef9f.jpg?imageView2/2/h/300)
 
+## 原版
+
+[https://github.com/iamxjb/winxin-app-watch-life.net](https://github.com/iamxjb/winxin-app-watch-life.net)
+
 ## 功能清单
 
 1.缩略图的方式显示文章列表（首页，分类文章），包括显示文章分类和发布时间，加载分页。
